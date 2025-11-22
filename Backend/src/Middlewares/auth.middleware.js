@@ -8,15 +8,14 @@ export const protectroute = async(req,res,next)=>{
              const token = req.cookies.jwt // || req.headers.authorization.split(" ")[1];
              
              if(!token){
-                res.status(401).json({message : "please login first"});
+              return   res.status(401).json({message : "please login first"});
              }
-             console.log(token);
-             console.log(process.env.JWT_SECRET);
-             
              const decodedtoken = jwt.verify(token,process.env.JWT_SECRET);
              if(!decodedtoken){
                return res.status(400).json({message : "error or expired token"})
              }
+             console.log(decodedtoken);
+             
              const user = await User.findById(decodedtoken.userid).select("-password");
              if(!user){
                 return res.status(404).json({message : "User not found"});

@@ -1,6 +1,5 @@
 backend/node_modules/
 frontend/node_modules/
-backend/.env
 
 # Logs
 backend/logs/
@@ -31,7 +30,5 @@ frontend/.parcel-cache/
 *.tmp
 *.swp
 
-# Lock files (optional)
-package-lock.json
-yarn.lock
-pnpm-lock.yaml
+
+.env

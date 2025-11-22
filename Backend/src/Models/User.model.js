@@ -2,7 +2,7 @@ import mongoose from "mongoose";
 
 
 const UserSchema =  new mongoose.Schema({
-        fullname :{
+        fullName :{
                type : String,
                required : true,
         },
@@ -20,24 +20,24 @@ const UserSchema =  new mongoose.Schema({
              type : String,
              default : ""
         },
-        NativeLanguage:{
+        nativeLanguage:{
              type : String,
              default : "",
         },
-        LearningLanguage :{
+        learningLanguage :{
              type : String,
              default : "",
         },
-        Location :{
+        location :{
              type : String,
              default : "",
         },
-        ProfilePicture :{
+        profilePic :{
              type : String,
              default : "",
         },
-        isonboarded : {
-               type : String,
+        isOnboarded : {
+               type : Boolean,
                default : false,
         },
         friends :
