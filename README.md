@@ -100,7 +100,7 @@ npm run dev
 
 ## 🖼️ Demo
 
-![App Preview](/frontend/public/screenshot-for-readme.png)
+![App Preview](/Frontend/public/screenshot-for-readme.png)
 
 ---
 
